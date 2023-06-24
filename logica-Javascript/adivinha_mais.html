@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Futebol</title>
+  </head>
+
+  <input type="number" />
+  <button>Comparar numero</button>
+  <script>
+    function sorteianum(quantidade) {
+      var segredos = [];
+      var numaleatorio;
+      var achou = false;
+      var i = 0;
+
+      while (i < quantidade) {
+        numaleatorio = ath.round(Math.random() * 10);
+
+        for (let j = 0; j < segredos.length; j++) {
+          if (segredos[j] == numaleatorio) {
+            achou = true;
+            break;
+          }
+        }
+        if (achou == false) {
+          segredos.push(Math.round(Math.random() * 10));
+          i++;
+        }
+      }
+
+      return segredos;
+    }
+
+    var segredo = sorteianum(3);
+
+    var input = document.querySelector("input");
+    input.focus();
+
+    console.log(segredo);
+    var acerto = 0;
+
+    function verifica() {
+      for (let posicao = 0; posicao < segredo.length; posicao++) {
+        if (input.value == segredo[posicao]) {
+          acerto++;
+        }
+      }
+
+      if (acerto != 0) {
+        alert("voce acertou um numero");
+        acerto = 0;
+      } else {
+        alert("voce errou ");
+      }
+
+      input.value = "";
+      input.focus();
+    }
+
+    var button = document.querySelector("button");
+
+    button.onclick = verifica;
+  </script>
+</html>

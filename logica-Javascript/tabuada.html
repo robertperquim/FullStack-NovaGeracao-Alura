@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Futebol</title>
+    <script>
+      function pulaLinha() {
+        document.write("<br><br>");
+      }
+
+      function escreve(frase) {
+        document.write(frase);
+        pulaLinha();
+      }
+
+      var tabuada = parseInt(
+        prompt("Digite o numero da tabuada que voce quer? ")
+      );
+      var i;
+      for (i = 0; i <= 10; i++) {
+        escreve(tabuada + " * " + i + " = " + tabuada * i);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

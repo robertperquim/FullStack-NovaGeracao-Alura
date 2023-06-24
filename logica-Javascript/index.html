@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>JS</title>
+
+    <script>
+      function pulaLinha() {
+        document.write("<br><br>");
+      }
+
+      function escreve(frase) {
+        document.write(frase);
+        pulaLinha();
+      }
+
+      var anos = 2023;
+      var idadeisa = 21;
+      var idadeisu = 23;
+      var media = (idadeisa + idadeisu) / 2;
+      var nome = "isa";
+
+      escreve("Isa tem " + (anos - 2002) + " anos");
+
+      escreve("Isu tem " + (anos - 2000) + " anos");
+
+      escreve("A media das idades e " + Math.round(media) + " anos");
+
+      escreve("A idade da " + nome + " e " + idadeisa + " anos");
+    </script>
+  </head>
+  <body></body>
+</html>
